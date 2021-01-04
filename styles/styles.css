@@ -1,4 +1,28 @@
-h1 {
-  color: #dc414c;
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.dashboard-card h4 {
+  font-size: 12px;
+}
+
+.dashboard-card .follower-count {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.dashboard-card .count-header {
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  font-size: 11px;
+}
+
+.dashboard-card .count-for-day {
+  font-size: 10px;
+}
+
+.overview-card-title {
+  font-size: 14px;
+  font-weight: 400;
 }
 /*# sourceMappingURL=styles.css.map */

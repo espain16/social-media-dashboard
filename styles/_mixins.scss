@@ -1,0 +1,20 @@
+// create a mixin for the social media cards 
+@mixin dashboard_card {
+  height: 190px;
+  width: 220px;
+  border-radius: 5px;
+}
+// a mixin for overview card 
+@mixin overview_card {
+  width: 220px;
+  border-radius: 5px;
+  
+}
+
+// mixin for the styling of the content 
+@mixin flex_center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}

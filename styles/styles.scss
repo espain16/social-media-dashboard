@@ -1,5 +1,34 @@
 @import './variables' ;
+@import './mixins' ;
 
-h1 {
-  color: $brightRed;
+body {
+  font-family: $fontFamily;
+}
+//social dashboard general styles 
+.dashboard-card {
+  h4 {
+    font-size: $fontSize12;
+  }
+  .follower-count {
+  font-size: 28px;
+  font-weight: $boldWeights;
+  }
+
+  .count-header {
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  font-size: 11px;
+  }
+
+  .count-for-day {
+  font-size: $fontSize10;
+  }
+}
+
+
+
+//overview dashboard general styles 
+.overview-card-title {
+  font-size: $fontSize14;
+  font-weight: $lightWeight;
 }
