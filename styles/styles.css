@@ -21,8 +21,37 @@ body {
   font-size: 10px;
 }
 
-.overview-card-title {
-  font-size: 14px;
-  font-weight: 400;
+.dashboard-card .increase {
+  color: #1db489;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.dashboard-card .decrease {
+  color: #dc414c;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.overview-card .overview-card-title {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.overview-card .overview-count {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.overview-card .increase {
+  color: #1db489;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.overview-card .decrease {
+  color: #dc414c;
+  font-size: 10px;
+  font-weight: 700;
 }
 /*# sourceMappingURL=styles.css.map */

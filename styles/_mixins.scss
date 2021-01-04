@@ -18,3 +18,16 @@
   flex-direction: column;
   justify-content: center;
 }
+
+// Social media increase and decrease 
+@mixin decreased {
+  color: $brightRed;
+  font-size: $fontSize10;
+  font-weight: $boldWeights;
+} 
+
+@mixin increased {
+  color: $limeGreen;
+  font-size: $fontSize10;
+  font-weight: $boldWeights;
+}

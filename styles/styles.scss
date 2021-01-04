@@ -6,6 +6,7 @@ body {
 }
 //social dashboard general styles 
 .dashboard-card {
+
   h4 {
     font-size: $fontSize12;
   }
@@ -23,12 +24,31 @@ body {
   .count-for-day {
   font-size: $fontSize10;
   }
+  .increase { 
+    @include increased;
+  }
+  .decrease {
+    @include decreased;
+  }
 }
 
 
 
 //overview dashboard general styles 
-.overview-card-title {
-  font-size: $fontSize14;
-  font-weight: $lightWeight;
+.overview-card {
+
+  .overview-card-title {
+  font-size: $fontSize10;
+  font-weight: $boldWeights;
+  }
+  .overview-count {
+    font-weight: $boldWeights;
+    font-size: 20px;
+  }
+  .increase { 
+    @include increased;
+  }
+  .decrease {
+    @include decreased;
+  }
 }
