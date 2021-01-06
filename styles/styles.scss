@@ -1,5 +1,8 @@
 @import './variables' ;
 @import './mixins' ;
+@import 'scss/fontawesome.scss';
+@import 'scss/solid.scss';
+@import 'scss/brands.scss'; 
 
 body {
   font-family: $fontFamily;
@@ -52,3 +55,5 @@ body {
     @include decreased;
   }
 }
+
+
