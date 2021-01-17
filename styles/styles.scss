@@ -3,57 +3,139 @@
 @import 'scss/fontawesome.scss';
 @import 'scss/solid.scss';
 @import 'scss/brands.scss'; 
+@import './breakpoint.scss';
 
 body {
   font-family: $fontFamily;
+  background-color: $whiteBackGround;
+
+  h1,h2,h3,h4 {
+    margin: 0;
+  }
+  .fa-facebook-square {
+    color: $faceBook;
+  }
+  .fa-twitter {
+    color: $twitter;
+  }
+  .fa-instagram {
+    color: $instagram;
+  }
+  .fa-youtube-square {
+    color: $youTube;
+  }
 }
-//social dashboard general styles 
-.dashboard-card {
 
-  h4 {
-    font-size: $fontSize12;
+header {
+  margin-top: 35px;
+  padding: $paddingLeftRight;
+  .sub-header {
+    color: $darkGrayFont;
   }
-  .follower-count {
-  font-size: 28px;
-  font-weight: $boldWeights;
+  @include media("<=phone") {
+    .main-header {
+      font-size: 20px;
+    }
+    .sub-header {
+      font-size: $fontSize10;
+      margin-top: 4px;
+      margin-bottom: 20px;
+    }
+    
   }
+}
 
-  .count-header {
-  text-transform: uppercase;
-  letter-spacing: 2.2px;
-  font-size: 11px;
-  }
-
-  .count-for-day {
+.toggle {
+  padding: $paddingLeftRight;
+  color: $darkGrayFont; 
   font-size: $fontSize10;
+  font-weight: $boldWeights;
+}
+//social dashboard 
+.social-dash {
+
+  @include media("<=phone") {
+    @include column_grid;
   }
-  .increase { 
-    @include increased;
+  .card1 {
+    @include card_border;
+    border-color: $faceBook;
   }
-  .decrease {
-    @include decreased;
+  .card2 {
+    @include card_border;
+    border-color: $twitter;
+  }
+  .card3 {
+    @include linear_border;
+  }
+  .card4 {
+    @include card_border;
+    border-color: $youTube;
+  }
+
+
+  .dashboard-card {
+    @include dashboard_card;
+    @include flex_center;
+    
+
+    h4 {
+      font-size: $fontSize12;
+      padding-top: 13px;
+    }
+    .follower-count {
+      font-size: 50px;
+      font-weight: $boldWeights;
+      margin: $marginZero;
+      margin-top: 15px;
+    }
+    .count-header {
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 11px;
+      margin: $marginZero;
+    }
+    .count-for-day {
+      font-size: $fontSize10;
+      margin: $marginZero;
+      padding-top: 25px;
+    }
+    .increase { 
+      @include increased;
+    }
+    .decrease {
+      @include decreased;
+    }
   }
 }
 
 
 
 //overview dashboard general styles 
-.overview-card {
-
-  .overview-card-title {
-  font-size: $fontSize10;
-  font-weight: $boldWeights;
+.overview-container{
+  @include media("<=phone") {
+    @include column_grid;
   }
-  .overview-count {
+
+  .overview-card {
+    @include overview_card;
+    @include overview_grid;
+
+    .overview-card-title {
+    font-size: $fontSize10;
     font-weight: $boldWeights;
-    font-size: 20px;
+    }
+    .overview-count {
+      font-weight: $boldWeights;
+      font-size: 27px;
+    }
+    .increase { 
+      @include increased;
+    }
+    .decrease {
+      @include decreased;
+    }
   }
-  .increase { 
-    @include increased;
-  }
-  .decrease {
-    @include decreased;
-  }
-}
 
+}  
 
