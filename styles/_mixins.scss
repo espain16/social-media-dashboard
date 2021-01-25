@@ -6,7 +6,7 @@
 @mixin card_border {
   border-top: 3px solid;
 }
-// create a mixin for the social media cards 
+// social media specific styles 
 @mixin dashboard_card {
   height: 190px;
   width: 276px;
@@ -15,18 +15,23 @@
   background-color: $paleBlue;
   
 }
-// a mixin for overview card 
+// overview card specific styles 
 @mixin overview_card {
   width: 276px;
   border-radius: 5px;
   background-color: $paleBlue;
   margin-bottom: 20px;
+  
 }
-//styling the content of the overview card
+
 @mixin overview_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   
+}
+@mixin overview-percent {
+  margin-bottom: 0;
+  margin-top: 36px;
 }
 // mixin for the styling of the content 
 @mixin flex_center {
@@ -36,7 +41,7 @@
   justify-content: center;
 }
 
-// Social media increase and decrease 
+// Social media cards increase and decrease 
 @mixin decreased {
   color: $brightRed;
   font-size: $fontSize10;
@@ -48,7 +53,14 @@
   font-size: $fontSize10;
   font-weight: $boldWeights;
 }
-
+@mixin increase_arrow {
+  vertical-align: sub;
+  padding-right: 3px;
+}
+@mixin decrease_arrow {
+  vertical-align: text-top;
+  padding-right: 3px;
+}
 //Grid Layout for cards 
 @mixin column_grid {
   display: grid;

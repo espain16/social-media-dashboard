@@ -6156,6 +6156,10 @@ body .fa-youtube-square {
   color: #c4032a;
 }
 
+body p > .increase {
+  vertical-align: text-top;
+}
+
 header {
   margin-top: 35px;
   padding: 0 10px;
@@ -6249,6 +6253,11 @@ header .sub-header {
   padding-top: 13px;
 }
 
+.social-dash .dashboard-card h4 i {
+  vertical-align: sub;
+  padding-right: 6px;
+}
+
 .social-dash .dashboard-card .follower-count {
   font-size: 50px;
   font-weight: 700;
@@ -6275,10 +6284,20 @@ header .sub-header {
   font-weight: 700;
 }
 
+.social-dash .dashboard-card .increase i {
+  vertical-align: sub;
+  padding-right: 3px;
+}
+
 .social-dash .dashboard-card .decrease {
   color: #dc414c;
   font-size: 10px;
   font-weight: 700;
+}
+
+.social-dash .dashboard-card .decrease i {
+  vertical-align: text-top;
+  padding-right: 3px;
 }
 
 @media (max-width: 375px) {
@@ -6320,15 +6339,41 @@ header .sub-header {
   font-size: 27px;
 }
 
+.overview-container .overview-card .overview-percent {
+  margin-bottom: 0;
+  margin-top: 36px;
+}
+
 .overview-container .overview-card .increase {
   color: #1db489;
   font-size: 10px;
   font-weight: 700;
 }
 
+.overview-container .overview-card .increase i {
+  vertical-align: sub;
+  padding-right: 3px;
+}
+
 .overview-container .overview-card .decrease {
   color: #dc414c;
   font-size: 10px;
   font-weight: 700;
+}
+
+.overview-container .overview-card .decrease i {
+  vertical-align: text-top;
+  padding-right: 3px;
+}
+
+.overview-container .overview-card .column1 {
+  padding-top: 25px;
+  padding-left: 25px;
+}
+
+.overview-container .overview-card .column2 {
+  padding-top: 25px;
+  padding-right: 25px;
+  text-align: end;
 }
 /*# sourceMappingURL=styles.css.map */
