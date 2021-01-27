@@ -6,7 +6,7 @@
 @mixin card_border {
   border-top: 3px solid;
 }
-// social media specific styles 
+// social media card specific styles 
 @mixin dashboard_card {
   height: 190px;
   width: 276px;
@@ -23,7 +23,6 @@
   margin-bottom: 20px;
   
 }
-
 @mixin overview_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -47,7 +46,6 @@
   font-size: $fontSize10;
   font-weight: $boldWeights;
 } 
-
 @mixin increased {
   color: $limeGreen;
   font-size: $fontSize10;
@@ -61,6 +59,7 @@
   vertical-align: text-top;
   padding-right: 3px;
 }
+
 //Grid Layout for cards 
 @mixin column_grid {
   display: grid;
@@ -69,4 +68,32 @@
   grid-row-end: 1;
   justify-content: center;
   align-items: center;
+}
+
+//Toggle styles
+@mixin toggle-flexend {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+@mixin toggle_btn { 
+  appearance: none;
+  outline: none;
+  width: 40px;
+  border-radius: 10px;
+  height: 20px;
+  background-color: $twitter;
+  position: relative;
+}
+@mixin toggler {
+  content: "";
+  height: 16px;
+  width: 16px;
+  background-color: navy;
+  position: absolute; 
+  border-radius: 50px;
+  top:2px;
+  left: 2px;
+  
 }

@@ -6180,8 +6180,55 @@ header .sub-header {
   }
 }
 
-.toggle {
-  padding: 0 10px;
+hr {
+  margin-bottom: 0;
+}
+
+.toggle-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 0 9px;
+}
+
+.toggle-container input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  width: 40px;
+  border-radius: 10px;
+  height: 20px;
+  background-color: #1ca0f2;
+  position: relative;
+}
+
+.toggle-container input:before {
+  content: "";
+  height: 16px;
+  width: 16px;
+  background-color: navy;
+  position: absolute;
+  border-radius: 50px;
+  top: 2px;
+  left: 2px;
+}
+
+.toggle-container input:checked {
+  background-color: #aeb3cb;
+}
+
+.toggle-container input:checked:before {
+  -webkit-transform: translate(115%);
+          transform: translate(115%);
+}
+
+.toggle-container .toggle {
   color: #63687e;
   font-size: 10px;
   font-weight: 700;

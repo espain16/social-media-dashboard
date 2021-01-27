@@ -48,12 +48,32 @@ header {
     
   }
 }
+hr{
+  margin-bottom: 0;
+}
+.toggle-container{
+  @include toggle_flexend;
+  padding: 0 9px;
 
-.toggle {
-  padding: $paddingLeftRight;
-  color: $darkGrayFont; 
-  font-size: $fontSize10;
-  font-weight: $boldWeights;
+  input {
+    @include toggle_btn;
+  }
+  input:before {
+    @include toggler;
+
+  }
+  input:checked {
+    background-color: $lightToggle;
+    
+  }
+  input:checked:before {
+    transform: translate(115%);
+  }
+  .toggle {
+    color: $darkGrayFont; 
+    font-size: $fontSize10;
+    font-weight: $boldWeights;
+  }
 }
 //social dashboard 
 .social-dash {
