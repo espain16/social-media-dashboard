@@ -6131,9 +6131,23 @@ readers do not read off random characters that represent icons */
 * Testing
 *
 **/
+:root {
+  --page-background: white;
+  --card-background: paleBlue;
+  --toggle-background: #aeb3cb;
+  --primary-color: #1e202a;
+  --secondary-color: #63687e;
+  --facebook-color: #198ff5;
+  --twitter-color: #1ca0f2;
+  --instagram-color: linear-gradient(to right, #fdc468, #df4996);
+  --youtube-color: #c4032a;
+  --increase-color: #1db489;
+  --decrease-color: #dc414c;
+}
+
 body {
   font-family: "Inter", sans-serif;
-  background-color: white;
+  background-color: var(--page-background);
 }
 
 body h1, body h2, body h3, body h4 {
@@ -6141,19 +6155,19 @@ body h1, body h2, body h3, body h4 {
 }
 
 body .fa-facebook-square {
-  color: #198ff5;
+  color: var(--facebook-color);
 }
 
 body .fa-twitter {
-  color: #1ca0f2;
+  color: var(--twitter-color);
 }
 
 body .fa-instagram {
-  color: linear-gradient(to right, #fdc468, #df4996);
+  color: var(--instagram-color);
 }
 
 body .fa-youtube-square {
-  color: #c4032a;
+  color: var(--youtube-color);
 }
 
 body p > .increase {
@@ -6166,7 +6180,7 @@ header {
 }
 
 header .sub-header {
-  color: #63687e;
+  color: var(--secondary-color);
 }
 
 @media (max-width: 375px) {
@@ -6220,7 +6234,7 @@ hr {
 }
 
 .toggle-container input:checked {
-  background-color: #aeb3cb;
+  background-color: var(--toggle-background);
 }
 
 .toggle-container input:checked:before {
@@ -6229,7 +6243,7 @@ hr {
 }
 
 .toggle-container .toggle {
-  color: #63687e;
+  color: var(--secondary-color);
   font-size: 10px;
   font-weight: 700;
 }

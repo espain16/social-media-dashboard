@@ -5,24 +5,47 @@
 @import 'scss/brands.scss'; 
 @import './breakpoint.scss';
 
+:root{
+  --page-background: #{$whiteBackGround};
+  --card-background: #{paleBlue};
+  --toggle-background: #{$lightToggle};
+  --primary-color: #{$darkBlueFont};
+  --secondary-color: #{$darkGrayFont};
+  --facebook-color: #{$faceBook};
+  --twitter-color: #{$twitter};
+  --instagram-color: #{$instagram};
+  --youtube-color: #{$youTube};
+  --increase-color: #{$limeGreen};
+  --decrease-color: #{$brightRed};
+}
+
+.dark {
+  --page-background: #{$darkBackGround};
+  --card-background: #{$darkThemeCard};
+  --toggle-background: #{$darktToggle};
+  --primary-color: #{$whiteFont};
+  --secondary-color: #{$blueFont};
+  
+}
+
 body {
   font-family: $fontFamily;
-  background-color: $whiteBackGround;
+  background-color: var(--page-background);
 
   h1,h2,h3,h4 {
     margin: 0;
   }
   .fa-facebook-square {
-    color: $faceBook;
+    color: var(--facebook-color);
   }
   .fa-twitter {
-    color: $twitter;
+    color: var(--twitter-color);
   }
   .fa-instagram {
-    color: $instagram;
+    color: var(--instagram-color);
   }
   .fa-youtube-square {
-    color: $youTube;
+    color: var(--youtube-color);
   }
 
   p > .increase {
@@ -30,11 +53,12 @@ body {
   }
 }
 
+
 header {
   margin-top: 35px;
   padding: $paddingLeftRight;
   .sub-header {
-    color: $darkGrayFont;
+    color: var(--secondary-color);
   }
   @include media("<=phone") {
     .main-header {
@@ -63,14 +87,14 @@ hr{
 
   }
   input:checked {
-    background-color: $lightToggle;
+    background-color: var(--toggle-background);
     
   }
   input:checked:before {
     transform: translate(115%);
   }
   .toggle {
-    color: $darkGrayFont; 
+    color: var(--secondary-color); 
     font-size: $fontSize10;
     font-weight: $boldWeights;
   }
@@ -83,18 +107,19 @@ hr{
   }
   .card1 {
     @include card_border;
-    border-color: $faceBook;
+    border-color: var(--facebook-color);
   }
   .card2 {
     @include card_border;
-    border-color: $twitter;
+    border-color: var(--twitter-color);
   }
   .card3 {
     @include linear_border;
+    border-color: var(--instagram-color)
   }
   .card4 {
     @include card_border;
-    border-color: $youTube;
+    border-color: var(--youtube-color);
   }
 
 
@@ -196,4 +221,5 @@ hr{
   }
 
 }  
+
 
