@@ -7,7 +7,7 @@
 
 :root{
   --page-background: #{$whiteBackGround};
-  --card-background: #{paleBlue};
+  --card-background: #{$paleBlue};
   --toggle-background: #{$lightToggle};
   --primary-color: #{$darkBlueFont};
   --secondary-color: #{$darkGrayFont};
@@ -22,7 +22,7 @@
 .dark {
   --page-background: #{$darkBackGround};
   --card-background: #{$darkThemeCard};
-  --toggle-background: #{$darktToggle};
+  --toggle-background: #{$darkToggle};
   --primary-color: #{$whiteFont};
   --secondary-color: #{$blueFont};
   
@@ -57,6 +57,10 @@ body {
 header {
   margin-top: 35px;
   padding: $paddingLeftRight;
+
+  .main-header{
+    color: var(--primary-color);
+  }
   .sub-header {
     color: var(--secondary-color);
   }
@@ -131,7 +135,7 @@ hr{
     h4 {
       font-size: $fontSize12;
       padding-top: 13px;
-      i{
+      i {
         vertical-align: sub;
         padding-right: 6px;
       }
@@ -179,14 +183,17 @@ hr{
   @include media("<=phone") {
     @include column_grid;
   }
-
+  .overview-header{
+    color: var(--primary-color);
+  }
   .overview-card {
     @include overview_card;
     @include overview_grid;
 
     .overview-card-title {
-    font-size: $fontSize10;
-    font-weight: $boldWeights;
+      font-size: $fontSize10;
+      font-weight: $boldWeights;
+      color: var(--secondary-color);
     }
     .overview-count {
       font-weight: $boldWeights;

@@ -6133,7 +6133,7 @@ readers do not read off random characters that represent icons */
 **/
 :root {
   --page-background: white;
-  --card-background: paleBlue;
+  --card-background: #f5f7ff;
   --toggle-background: #aeb3cb;
   --primary-color: #1e202a;
   --secondary-color: #63687e;
@@ -6143,6 +6143,14 @@ readers do not read off random characters that represent icons */
   --youtube-color: #c4032a;
   --increase-color: #1db489;
   --decrease-color: #dc414c;
+}
+
+.dark {
+  --page-background: #1e202a;
+  --card-background: #252a41;
+  --toggle-background: linear-gradient #378fe6 to #3eda82;
+  --primary-color: white;
+  --secondary-color: #8b97c6;
 }
 
 body {
@@ -6177,6 +6185,10 @@ body p > .increase {
 header {
   margin-top: 35px;
   padding: 0 10px;
+}
+
+header .main-header {
+  color: var(--primary-color);
 }
 
 header .sub-header {
@@ -6268,12 +6280,12 @@ hr {
 
 .social-dash .card1 {
   border-top: 3px solid;
-  border-color: #198ff5;
+  border-color: var(--facebook-color);
 }
 
 .social-dash .card2 {
   border-top: 3px solid;
-  border-color: #1ca0f2;
+  border-color: var(--twitter-color);
 }
 
 .social-dash .card3 {
@@ -6281,11 +6293,12 @@ hr {
   -o-border-image: linear-gradient(to right, #fdc468, #df4996 30);
      border-image: -webkit-gradient(linear, left top, right top, from(#fdc468), color-stop(30, #df4996));
      border-image: linear-gradient(to right, #fdc468, #df4996 30);
+  border-color: var(--instagram-color);
 }
 
 .social-dash .card4 {
   border-top: 3px solid;
-  border-color: #c4032a;
+  border-color: var(--youtube-color);
 }
 
 .social-dash .dashboard-card {
@@ -6293,7 +6306,8 @@ hr {
   width: 276px;
   border-radius: 5px;
   margin-bottom: 20px;
-  background-color: #f5f7ff;
+  background-color: var(--card-background);
+  color: var(--primary-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6379,11 +6393,16 @@ hr {
   }
 }
 
+.overview-container .overview-header {
+  color: var(--primary-color);
+}
+
 .overview-container .overview-card {
   width: 276px;
   border-radius: 5px;
-  background-color: #f5f7ff;
+  background-color: var(--card-background);
   margin-bottom: 20px;
+  color: var(--primary-color);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -6393,6 +6412,7 @@ hr {
 .overview-container .overview-card .overview-card-title {
   font-size: 10px;
   font-weight: 700;
+  color: var(--secondary-color);
 }
 
 .overview-container .overview-card .overview-count {

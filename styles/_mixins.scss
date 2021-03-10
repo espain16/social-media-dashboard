@@ -9,18 +9,20 @@
 // social media card specific styles 
 @mixin dashboard_card {
   height: 190px;
-  width: 276px;
+  width: $cardWidth;
   border-radius: 5px;
   margin-bottom: 20px;
-  background-color: $paleBlue;
+  background-color: var(--card-background);
+  color: var(--primary-color);
   
 }
 // overview card specific styles 
 @mixin overview_card {
-  width: 276px;
-  border-radius: 5px;
-  background-color: $paleBlue;
-  margin-bottom: 20px;
+  width: $cardWidth;
+  border-radius: $borderRadius;
+  background-color: var(--card-background);
+  margin-bottom: $cardMargin;
+  color: var(--primary-color);
   
 }
 @mixin overview_grid {
