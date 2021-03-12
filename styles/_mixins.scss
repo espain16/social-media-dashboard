@@ -1,0 +1,101 @@
+//Card styles
+@mixin linear_border {
+  border-top: 30px solid;
+  border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%) 30) ;
+}
+@mixin card_border {
+  border-top: 3px solid;
+}
+// social media card specific styles 
+@mixin dashboard_card {
+  height: 190px;
+  width: $cardWidth;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: var(--card-background);
+  color: var(--primary-color);
+  
+}
+// overview card specific styles 
+@mixin overview_card {
+  width: $cardWidth;
+  border-radius: $borderRadius;
+  background-color: var(--card-background);
+  margin-bottom: $cardMargin;
+  color: var(--primary-color);
+  
+}
+@mixin overview_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  
+}
+@mixin overview-percent {
+  margin-bottom: 0;
+  margin-top: 36px;
+}
+// mixin for the styling of the content 
+@mixin flex_center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// Social media cards increase and decrease 
+@mixin decreased {
+  color: $brightRed;
+  font-size: $fontSize10;
+  font-weight: $boldWeights;
+} 
+@mixin increased {
+  color: $limeGreen;
+  font-size: $fontSize10;
+  font-weight: $boldWeights;
+}
+@mixin increase_arrow {
+  vertical-align: sub;
+  padding-right: 3px;
+}
+@mixin decrease_arrow {
+  vertical-align: text-top;
+  padding-right: 3px;
+}
+
+//Grid Layout for cards 
+@mixin column_grid {
+  display: grid;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+//Toggle styles
+@mixin toggle-flexend {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+@mixin toggle_btn { 
+  appearance: none;
+  outline: none;
+  width: 40px;
+  border-radius: 10px;
+  height: 20px;
+  background-color: $twitter;
+  position: relative;
+}
+@mixin toggler {
+  content: "";
+  height: 16px;
+  width: 16px;
+  background-color: navy;
+  position: absolute; 
+  border-radius: 50px;
+  top:2px;
+  left: 2px;
+  
+}

@@ -1,0 +1,40 @@
+$fa-font-path: './webfonts/';
+//Primary Colors
+$limeGreen: hsl(163, 72%, 41%);
+$brightRed: hsl(356, 69%, 56%);
+$faceBook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$youTube: hsl(348, 97%, 39%);
+
+//Dark Theme Colors
+$darkToggle: linear-gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+$darkBackGround: hsl(230, 17%, 14%);
+$darkBlue: hsl(232, 19%, 15%);
+$darkThemeCard: hsl(228, 28%, 20%);
+$blueFont: hsl(228, 34%, 66%);
+$whiteFont: hsl(0, 0%, 100%);
+
+//Light Theme Colors
+$lightToggle: hsl(230, 22%, 74%);
+$whiteBackGround: hsl(0, 0%, 100%);
+$paleBlue: hsl(225, 100%, 98%);
+$darkGrayFont: hsl(228, 12%, 44%);
+$darkBlueFont: hsl(230, 17%, 14%);
+
+//Typography
+$fontSize14: 14px;
+$fontSize10: 10px;
+$fontSize12: 12px;
+$fontFamily: 'Inter', sans-serif;
+$lightWeight: 400;
+$boldWeights: 700;
+$paddingLeftRight: 0 10px;
+//Media Queries
+$breakpoints:("phone":375px,"desktop":1440px);
+
+//General Styles
+$marginZero: 0;
+$borderRadius: 5px;
+$cardWidth: 276px;
+$cardMargin: 20px;
