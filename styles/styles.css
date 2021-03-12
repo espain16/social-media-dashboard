@@ -6395,6 +6395,8 @@ hr {
 
 .overview-container .overview-header {
   color: var(--primary-color);
+  margin-top: 30px;
+  margin-bottom: 25px;
 }
 
 .overview-container .overview-card {
@@ -6413,6 +6415,7 @@ hr {
   font-size: 10px;
   font-weight: 700;
   color: var(--secondary-color);
+  letter-spacing: 0.5px;
 }
 
 .overview-container .overview-card .overview-count {
@@ -6456,5 +6459,13 @@ hr {
   padding-top: 25px;
   padding-right: 25px;
   text-align: end;
+}
+
+.attribution {
+  color: var(--primary-color);
+}
+
+.attribution .footer-links {
+  color: var(--secondary-color);
 }
 /*# sourceMappingURL=styles.css.map */

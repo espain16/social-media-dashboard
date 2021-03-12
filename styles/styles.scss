@@ -185,6 +185,8 @@ hr{
   }
   .overview-header{
     color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 25px;
   }
   .overview-card {
     @include overview_card;
@@ -194,6 +196,7 @@ hr{
       font-size: $fontSize10;
       font-weight: $boldWeights;
       color: var(--secondary-color);
+      letter-spacing: 0.5px;
     }
     .overview-count {
       font-weight: $boldWeights;
@@ -229,4 +232,11 @@ hr{
 
 }  
 
+.attribution {
+  color: var(--primary-color);
+
+  .footer-links {
+    color: var(--secondary-color);
+  }
+}
 
