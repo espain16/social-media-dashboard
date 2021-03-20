@@ -63,13 +63,22 @@
 }
 
 //Grid Layout for cards 
-@mixin column_grid {
+@mixin one_column_grid {
   display: grid;
   grid-column-start: 1;
   grid-row-start: 1;
   grid-row-end: 1;
   justify-content: center;
   align-items: center;
+}
+@mixin double_column_grid {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
 }
 
 //Toggle styles

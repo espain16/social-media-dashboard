@@ -30,9 +30,15 @@ $fontFamily: 'Inter', sans-serif;
 $lightWeight: 400;
 $boldWeights: 700;
 $paddingLeftRight: 0 10px;
+
 //Media Queries
 $breakpoints:("phone":375px,"desktop":1440px);
 
+
+//Media Queries new attempt
+$mobileBreakPoint: 585px;
+$preTabletBreakPoint: 755px;
+$ipadProBreakPoint: 1024px;
 //General Styles
 $marginZero: 0;
 $borderRadius: 5px;

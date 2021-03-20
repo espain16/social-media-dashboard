@@ -103,11 +103,15 @@ hr{
     font-weight: $boldWeights;
   }
 }
+
 //social dashboard 
 .social-dash {
-
-  @include media("<=phone") {
-    @include column_grid;
+  //media query goes here 
+  @media(max-width: $mobileBreakPoint) {
+    @include one_column_grid;
+  }
+  @media(min-width: $preTabletBreakPoint) and (max-width: $ipadProBreakPoint){
+    @include double_column_grid;
   }
   .card1 {
     @include card_border;
@@ -180,9 +184,13 @@ hr{
 
 //overview dashboard general styles 
 .overview-container{
-  @include media("<=phone") {
-    @include column_grid;
+  //media query goes here 
+  @media(max-width: $mobileBreakPoint) {
+    @include one_column_grid;
   }
+  // @media(max-width: $preTabletBreakPoint) {
+  //   @include double_column_grid;
+  // }
   .overview-header{
     color: var(--primary-color);
     margin-top: 30px;
