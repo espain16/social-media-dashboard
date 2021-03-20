@@ -6139,7 +6139,7 @@ readers do not read off random characters that represent icons */
   --secondary-color: #63687e;
   --facebook-color: #198ff5;
   --twitter-color: #1ca0f2;
-  --instagram-color: linear-gradient(to right, #fdc468, #df4996);
+  --instagram-color: #df4996;
   --youtube-color: #c4032a;
   --increase-color: #1db489;
   --decrease-color: #dc414c;
@@ -6260,7 +6260,7 @@ hr {
   font-weight: 700;
 }
 
-@media (max-width: 585px) {
+@media (max-width: 754px) {
   .social-dash {
     display: -ms-grid;
     display: grid;
@@ -6280,6 +6280,7 @@ hr {
 
 @media (min-width: 755px) and (max-width: 1024px) {
   .social-dash {
+    margin-bottom: 50px;
     display: -ms-grid;
     display: grid;
     -ms-grid-column: 1;
@@ -6308,10 +6309,7 @@ hr {
 }
 
 .social-dash .card3 {
-  border-top: 30px solid;
-  -o-border-image: linear-gradient(to right, #fdc468, #df4996 30);
-     border-image: -webkit-gradient(linear, left top, right top, from(#fdc468), color-stop(30, #df4996));
-     border-image: linear-gradient(to right, #fdc468, #df4996 30);
+  border-top: 3px solid;
   border-color: var(--instagram-color);
 }
 
@@ -6394,7 +6392,7 @@ hr {
   padding-right: 3px;
 }
 
-@media (max-width: 585px) {
+@media (max-width: 754px) {
   .overview-container {
     display: -ms-grid;
     display: grid;
@@ -6412,9 +6410,28 @@ hr {
   }
 }
 
+@media (min-width: 755px) and (max-width: 1024px) {
+  .overview-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 1;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+  }
+}
+
 .overview-container .overview-header {
   color: var(--primary-color);
-  margin-top: 30px;
+  margin-top: 18px;
   margin-bottom: 25px;
 }
 

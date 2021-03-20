@@ -1,5 +1,6 @@
 $fa-font-path: './webfonts/';
 //Primary Colors
+$hotPink: hsl(329, 70%, 58%);
 $limeGreen: hsl(163, 72%, 41%);
 $brightRed: hsl(356, 69%, 56%);
 $faceBook: hsl(208, 92%, 53%);
@@ -36,7 +37,7 @@ $breakpoints:("phone":375px,"desktop":1440px);
 
 
 //Media Queries new attempt
-$mobileBreakPoint: 585px;
+$mobileBreakPoint: 754px;
 $preTabletBreakPoint: 755px;
 $ipadProBreakPoint: 1024px;
 //General Styles

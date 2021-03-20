@@ -1,8 +1,8 @@
 //Card styles
-@mixin linear_border {
-  border-top: 30px solid;
-  border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%) 30) ;
-}
+// @mixin linear_border {
+//   border-top: 30px solid;
+//   border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%) 30) ;
+// }
 @mixin card_border {
   border-top: 3px solid;
 }
