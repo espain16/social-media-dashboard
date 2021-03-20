@@ -106,15 +106,19 @@ hr{
 
 //social dashboard 
 .social-dash {
- 
   //media query goes here 
   @media(max-width: $mobileBreakPoint) {
     @include one_column_grid;
   }
-  @media(min-width: $preTabletBreakPoint) and (max-width: $ipadProBreakPoint){
+  @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint){
     margin-bottom: 50px;
     @include double_column_grid;
   }
+  @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
+    @include four_column_grid;
+  }
+
+
   .card1 {
     @include card_border;
     border-color: var(--facebook-color);
@@ -186,57 +190,67 @@ hr{
 
 //overview dashboard general styles 
 .overview-container{
-  //media query goes here 
-  @media(max-width: $mobileBreakPoint) {
-    @include one_column_grid;
-  }
-  @media(min-width: $preTabletBreakPoint) and (max-width: $ipadProBreakPoint) {
-    @include double_column_grid;
-  }
-  .overview-header{
-    color: var(--primary-color);
-    margin-top: 18px;
-    margin-bottom: 25px;
-  }
-  .overview-card {
-    @include overview_card;
-    @include overview_grid;
 
-    .overview-card-title {
-      font-size: $fontSize10;
-      font-weight: $boldWeights;
-      color: var(--secondary-color);
-      letter-spacing: 0.5px;
+  
+  .overview-header-container{
+    display: flex;
+    
+    .overview-header{
+      color: var(--primary-color);
+      margin-top: 18px;
+      margin-bottom: 25px;
     }
-    .overview-count {
-      font-weight: $boldWeights;
-      font-size: 27px;
+  }
+  
+  .overview-card-container{
+    //media query goes here 
+    @media(max-width: $mobileBreakPoint) {
+      @include one_column_grid;
     }
-    .overview-percent {
-      @include overview-percent;
+    @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint) {
+      @include double_column_grid;
     }
-    .increase { 
-      @include increased;
-      
-      i {
-        @include increase_arrow;
-      }
-    }
-    .decrease {
-      @include decreased;
 
-      i{
-        @include decrease_arrow;
+    .overview-card {
+      @include overview_card;
+      @include overview_grid;
+  
+      .overview-card-title {
+        font-size: $fontSize10;
+        font-weight: $boldWeights;
+        color: var(--secondary-color);
+        letter-spacing: 0.5px;
       }
-    }
-    .column1{
-      padding-top: 25px;
-      padding-left: 25px;
-    }
-    .column2 {
-      padding-top: 25px;
-      padding-right: 25px;
-      text-align: end;
+      .overview-count {
+        font-weight: $boldWeights;
+        font-size: 27px;
+      }
+      .overview-percent {
+        @include overview-percent;
+      }
+      .increase { 
+        @include increased;
+        
+        i {
+          @include increase_arrow;
+        }
+      }
+      .decrease {
+        @include decreased;
+  
+        i{
+          @include decrease_arrow;
+        }
+      }
+      .column1{
+        padding-top: 25px;
+        padding-left: 25px;
+      }
+      .column2 {
+        padding-top: 25px;
+        padding-right: 25px;
+        text-align: end;
+      }
     }
   }
 

@@ -32,14 +32,12 @@ $lightWeight: 400;
 $boldWeights: 700;
 $paddingLeftRight: 0 10px;
 
-//Media Queries
-$breakpoints:("phone":375px,"desktop":1440px);
-
-
 //Media Queries new attempt
 $mobileBreakPoint: 754px;
-$preTabletBreakPoint: 755px;
-$ipadProBreakPoint: 1024px;
+$smallTabletBreakPoint: 755px;
+$largerTabletBreakPoint: 1024px;
+$ipadProBreakpoint: 1025px;
+$desktopBreakpoint: 1280px;
 //General Styles
 $marginZero: 0;
 $borderRadius: 5px;

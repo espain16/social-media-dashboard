@@ -73,9 +73,14 @@
 }
 @mixin double_column_grid {
   display: grid;
-  grid-column-start: 1;
-  grid-column-end: 1;
   grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+@mixin four_column_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   align-items: center;
   justify-items: center;

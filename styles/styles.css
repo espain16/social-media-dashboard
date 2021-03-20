@@ -6195,7 +6195,7 @@ header .sub-header {
   color: var(--secondary-color);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 360px) {
   header .main-header {
     font-size: 20px;
   }
@@ -6283,11 +6283,24 @@ hr {
     margin-bottom: 50px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-column: 1;
-        grid-column-start: 1;
-    grid-column-end: 1;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: center;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .social-dash {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -6392,8 +6405,20 @@ hr {
   padding-right: 3px;
 }
 
+.overview-container .overview-header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.overview-container .overview-header-container .overview-header {
+  color: var(--primary-color);
+  margin-top: 18px;
+  margin-bottom: 25px;
+}
+
 @media (max-width: 754px) {
-  .overview-container {
+  .overview-container .overview-card-container {
     display: -ms-grid;
     display: grid;
     -ms-grid-column: 1;
@@ -6411,12 +6436,9 @@ hr {
 }
 
 @media (min-width: 755px) and (max-width: 1024px) {
-  .overview-container {
+  .overview-container .overview-card-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-column: 1;
-        grid-column-start: 1;
-    grid-column-end: 1;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     -webkit-box-pack: center;
@@ -6429,13 +6451,7 @@ hr {
   }
 }
 
-.overview-container .overview-header {
-  color: var(--primary-color);
-  margin-top: 18px;
-  margin-bottom: 25px;
-}
-
-.overview-container .overview-card {
+.overview-container .overview-card-container .overview-card {
   width: 276px;
   border-radius: 5px;
   background-color: var(--card-background);
@@ -6447,51 +6463,51 @@ hr {
       grid-template-columns: repeat(2, 1fr);
 }
 
-.overview-container .overview-card .overview-card-title {
+.overview-container .overview-card-container .overview-card .overview-card-title {
   font-size: 10px;
   font-weight: 700;
   color: var(--secondary-color);
   letter-spacing: 0.5px;
 }
 
-.overview-container .overview-card .overview-count {
+.overview-container .overview-card-container .overview-card .overview-count {
   font-weight: 700;
   font-size: 27px;
 }
 
-.overview-container .overview-card .overview-percent {
+.overview-container .overview-card-container .overview-card .overview-percent {
   margin-bottom: 0;
   margin-top: 36px;
 }
 
-.overview-container .overview-card .increase {
+.overview-container .overview-card-container .overview-card .increase {
   color: #1db489;
   font-size: 10px;
   font-weight: 700;
 }
 
-.overview-container .overview-card .increase i {
+.overview-container .overview-card-container .overview-card .increase i {
   vertical-align: sub;
   padding-right: 3px;
 }
 
-.overview-container .overview-card .decrease {
+.overview-container .overview-card-container .overview-card .decrease {
   color: #dc414c;
   font-size: 10px;
   font-weight: 700;
 }
 
-.overview-container .overview-card .decrease i {
+.overview-container .overview-card-container .overview-card .decrease i {
   vertical-align: text-top;
   padding-right: 3px;
 }
 
-.overview-container .overview-card .column1 {
+.overview-container .overview-card-container .overview-card .column1 {
   padding-top: 25px;
   padding-left: 25px;
 }
 
-.overview-container .overview-card .column2 {
+.overview-container .overview-card-container .overview-card .column2 {
   padding-top: 25px;
   padding-right: 25px;
   text-align: end;
