@@ -42,7 +42,7 @@ body {
     color: var(--twitter-color);
   }
   .fa-instagram {
-    color: var(--instagram-color);
+    @include gradient_background(left,$instagram);
   }
   .fa-youtube-square {
     color: var(--youtube-color);
@@ -191,19 +191,14 @@ hr{
 //overview dashboard general styles 
 .overview-container{
 
-  
-  .overview-header-container{
-    display: flex;
-    
-    .overview-header{
+  .overview-header{
       color: var(--primary-color);
       margin-top: 18px;
       margin-bottom: 25px;
-    }
   }
   
-  .overview-card-container{
-    //media query goes here 
+  
+  //media query goes here 
     @media(max-width: $mobileBreakPoint) {
       @include one_column_grid;
     }
@@ -212,49 +207,48 @@ hr{
     }
 
     .overview-card {
-      @include overview_card;
-      @include overview_grid;
+    @include overview_card;
+    @include overview_grid;
   
-      .overview-card-title {
-        font-size: $fontSize10;
-        font-weight: $boldWeights;
-        color: var(--secondary-color);
-        letter-spacing: 0.5px;
-      }
-      .overview-count {
-        font-weight: $boldWeights;
-        font-size: 27px;
-      }
-      .overview-percent {
-        @include overview-percent;
-      }
-      .increase { 
-        @include increased;
+    .overview-card-title {
+      font-size: $fontSize10;
+      font-weight: $boldWeights;
+      color: var(--secondary-color);
+      letter-spacing: 0.5px;
+    }
+    .overview-count {
+      font-weight: $boldWeights;
+      font-size: 27px;
+    }
+    .overview-percent {
+      @include overview-percent;
+    }
+    .increase { 
+      @include increased;
         
-        i {
+      i {
           @include increase_arrow;
-        }
-      }
-      .decrease {
-        @include decreased;
-  
-        i{
-          @include decrease_arrow;
-        }
-      }
-      .column1{
-        padding-top: 25px;
-        padding-left: 25px;
-      }
-      .column2 {
-        padding-top: 25px;
-        padding-right: 25px;
-        text-align: end;
       }
     }
+    .decrease {
+      @include decreased;
+  
+      i{
+          @include decrease_arrow;
+      }
+    }
+    .column1{
+      padding-top: 25px;
+      padding-left: 25px;
+    }
+    .column2 {
+      padding-top: 25px;
+      padding-right: 25px;
+      text-align: end;
+    }
   }
-
-}  
+}
+ 
 
 .attribution {
   color: var(--primary-color);
