@@ -31,10 +31,15 @@
   color: var(--primary-color);
   
 }
-@mixin overview_grid {
+@mixin overview_card_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   
+}
+@mixin overview_card_display_grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(8,1fr);
 }
 @mixin overview-percent {
   margin-bottom: 0;
@@ -68,7 +73,7 @@
   padding-right: 3px;
 }
 
-//Grid Layout for cards 
+//Social dashboard card media query layouts
 @mixin one_column_grid {
   display: grid;
   grid-column-start: 1;
@@ -90,6 +95,18 @@
   justify-content: center;
   align-items: center;
   justify-items: center;
+}
+//Overview card media query layouts
+@mixin overview_tablet_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5,1fr);
+
+}
+@mixin overview_desktop_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3,1fr);
 }
 
 //Toggle styles
