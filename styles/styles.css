@@ -6195,7 +6195,7 @@ header .sub-header {
   color: var(--secondary-color);
 }
 
-@media (max-width: 360px) {
+@media (max-width: 754px) {
   header .main-header {
     font-size: 20px;
   }

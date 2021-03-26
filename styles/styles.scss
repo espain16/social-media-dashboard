@@ -64,7 +64,7 @@ header {
   .sub-header {
     color: var(--secondary-color);
   }
-  @include media("<=phone") {
+  @media(max-width: $mobileBreakPoint) {
     .main-header {
       font-size: 20px;
     }
@@ -73,8 +73,10 @@ header {
       margin-top: 4px;
       margin-bottom: 20px;
     }
-    
   }
+  
+    
+  
 }
 hr{
   margin-bottom: 0;
