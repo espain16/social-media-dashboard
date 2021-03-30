@@ -74,12 +74,37 @@ header {
       margin-bottom: 20px;
     }
   }
+  @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint){
+    .main-header {
+      font-size: $fontSize22;
+      letter-spacing: 0.75px;
+    }
+    .sub-header{
+      @include subheader_desktop_tablet_styles;
+    }
+    .decorative-breakline{
+      @include desktop_hr_style;
+    }
+  }
+  @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
+    .main-header {
+      font-size: $fontSize22;
+      letter-spacing: 0.75px;
+    }
+    .sub-header{
+      @include subheader_desktop_tablet_styles;
+    }
+    .decorative-breakline{
+      @include desktop_hr_style;
+    }
+  }
   
     
   
 }
 hr{
-  margin-bottom: 0;
+  @include mobile_hr_style;
+  // margin-bottom: 0;
 }
 .toggle-container{
   @include toggle_flexend;
@@ -104,10 +129,13 @@ hr{
     font-size: $fontSize10;
     font-weight: $boldWeights;
   }
+  
 }
 
 //social dashboard 
 .social-dash {
+  // width: 84%;
+  // margin: 0 auto;
   //media query goes here 
   @media(max-width: $mobileBreakPoint) {
     @include one_column_grid;
@@ -136,17 +164,19 @@ hr{
   .card4 {
     @include card_border;
     border-color: var(--youtube-color);
+    margin-right: 0px;
   }
 
 
   .dashboard-card {
     @include dashboard_card;
     @include flex_center;
-    
+    // margin-right: 25px;
 
     h4 {
-      font-size: $fontSize12;
+      font-size: $fontSize10;
       padding-top: 13px;
+      color: var(--secondary-color);
       i {
         vertical-align: sub;
         padding-right: 6px;
@@ -163,6 +193,7 @@ hr{
       letter-spacing: 5px;
       font-size: 11px;
       margin: $marginZero;
+      color: var(--secondary-color);
     }
     .count-for-day {
       font-size: $fontSize10;
@@ -192,7 +223,6 @@ hr{
 
 //overview dashboard general styles 
 .overview-container{
-  
   //media query goes here 
     @media(max-width: $mobileBreakPoint) {
       @include overview_card_display_grid;
@@ -215,10 +245,10 @@ hr{
   .overview-header{
     color: var(--primary-color);
     margin-top: 18px;
-    margin-bottom: 25px;
+    
   }
   
-    .overview-card {
+  .overview-card {
     @include overview_card;
     @include overview_card_grid;
   

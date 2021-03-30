@@ -1,7 +1,15 @@
 //General styles 
-
-@mixin mainheader_hr_style {
+@mixin subheader_desktop_tablet_styles {
+  font-size: $fontSize12;
+  margin-top: 5px;
+}
+@mixin desktop_hr_style {
   display: none;
+}
+@mixin mobile_hr_style {
+  border: 0;
+  height: 1px;
+  background: var(--secondary-color);
 }
 //Gradient styles 
 @mixin gradient_background($direction, $instagram){
@@ -20,7 +28,7 @@
 }
 // social media card specific styles 
 @mixin dashboard_card {
-  height: 190px;
+  height: 200px;
   width: $cardWidth;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -35,6 +43,7 @@
   background-color: var(--card-background);
   margin-bottom: $cardMargin;
   color: var(--primary-color);
+  place-self: center;
   
 }
 @mixin overview_card_grid {
@@ -46,6 +55,8 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(8,1fr);
+  justify-content: center;
+  align-content: center;
 }
 @mixin overview-percent {
   margin-bottom: 0;
@@ -107,6 +118,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5,1fr);
+ 
 
 }
 @mixin overview_desktop_grid {

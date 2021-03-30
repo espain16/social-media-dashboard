@@ -6206,8 +6206,38 @@ header .sub-header {
   }
 }
 
+@media (min-width: 755px) and (max-width: 1144px) {
+  header .main-header {
+    font-size: 22px;
+    letter-spacing: 0.75px;
+  }
+  header .sub-header {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  header .decorative-breakline {
+    display: none;
+  }
+}
+
+@media (min-width: 1145px) and (max-width: 1500px) {
+  header .main-header {
+    font-size: 22px;
+    letter-spacing: 0.75px;
+  }
+  header .sub-header {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  header .decorative-breakline {
+    display: none;
+  }
+}
+
 hr {
-  margin-bottom: 0;
+  border: 0;
+  height: 1px;
+  background: var(--secondary-color);
 }
 
 .toggle-container {
@@ -6329,11 +6359,12 @@ hr {
 .social-dash .card4 {
   border-top: 3px solid;
   border-color: var(--youtube-color);
+  margin-right: 0px;
 }
 
 .social-dash .dashboard-card {
-  height: 190px;
-  width: 276px;
+  height: 200px;
+  width: 240px;
   border-radius: 5px;
   margin-bottom: 20px;
   background-color: var(--card-background);
@@ -6354,8 +6385,9 @@ hr {
 }
 
 .social-dash .dashboard-card h4 {
-  font-size: 12px;
+  font-size: 10px;
   padding-top: 13px;
+  color: var(--secondary-color);
 }
 
 .social-dash .dashboard-card h4 i {
@@ -6375,6 +6407,7 @@ hr {
   letter-spacing: 5px;
   font-size: 11px;
   margin: 0;
+  color: var(--secondary-color);
 }
 
 .social-dash .dashboard-card .count-for-day {
@@ -6413,6 +6446,11 @@ hr {
         grid-template-columns: repeat(1, 1fr);
     -ms-grid-rows: (1fr)[8];
         grid-template-rows: repeat(8, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
 }
 
@@ -6454,15 +6492,15 @@ hr {
 .overview-container .overview-header {
   color: var(--primary-color);
   margin-top: 18px;
-  margin-bottom: 25px;
 }
 
 .overview-container .overview-card {
-  width: 276px;
+  width: 240px;
   border-radius: 5px;
   background-color: var(--card-background);
   margin-bottom: 20px;
   color: var(--primary-color);
+  place-self: center;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
