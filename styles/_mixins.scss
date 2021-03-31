@@ -101,14 +101,14 @@
 }
 @mixin double_column_grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 300px);
   justify-content: center;
   align-items: center;
   justify-items: center;
 }
 @mixin four_column_grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 265px);
   justify-content: center;
   align-items: center;
   justify-items: center;
@@ -116,15 +116,16 @@
 //Overview card media query layouts
 @mixin overview_tablet_grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 300px);
   grid-template-rows: repeat(5,1fr);
- 
+  justify-content: center;
 
 }
 @mixin overview_desktop_grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 265px);
   grid-template-rows: repeat(3,1fr);
+  justify-content: center;
 }
 
 //Toggle styles

@@ -6313,8 +6313,8 @@ hr {
     margin-bottom: 50px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (300px)[2];
+        grid-template-columns: repeat(2, 300px);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -6329,8 +6329,8 @@ hr {
   .social-dash {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (265px)[4];
+        grid-template-columns: repeat(4, 265px);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -6458,10 +6458,13 @@ hr {
   .overview-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (300px)[2];
+        grid-template-columns: repeat(2, 300px);
     -ms-grid-rows: (1fr)[5];
         grid-template-rows: repeat(5, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .overview-container .overview-header {
     -ms-grid-row: 1;
@@ -6475,10 +6478,13 @@ hr {
   .overview-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (265px)[4];
+        grid-template-columns: repeat(4, 265px);
     -ms-grid-rows: (1fr)[3];
         grid-template-rows: repeat(3, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .overview-container .overview-header {
     -ms-grid-row: 1;
