@@ -28,7 +28,7 @@
 }
 // social media card specific styles 
 @mixin dashboard_card {
-  height: 200px;
+  height: 220px;
   width: $cardWidth;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -101,7 +101,7 @@
 }
 @mixin double_column_grid {
   display: grid;
-  grid-template-columns: repeat(2, 300px);
+  grid-template-columns: repeat(2, 335px);
   justify-content: center;
   align-items: center;
   justify-items: center;
@@ -116,7 +116,7 @@
 //Overview card media query layouts
 @mixin overview_tablet_grid {
   display: grid;
-  grid-template-columns: repeat(2, 300px);
+  grid-template-columns: repeat(2, 335px);
   grid-template-rows: repeat(5,1fr);
   justify-content: center;
 

@@ -64,27 +64,69 @@ header {
   .sub-header {
     color: var(--secondary-color);
   }
+  hr{
+    @include mobile_hr_style;
+    
+  }
+  .toggle-container{
+    @include toggle_flexend;
+    padding: 0 12px;
+    
+    input {
+      @include toggle_btn;
+    }
+    input:before {
+      @include toggler;
+      
+    }
+    input:checked {
+      background-color: var(--toggle-background);
+      
+    }
+    input:checked:before {
+      transform: translate(115%);
+    }
+    .toggle {
+      color: var(--secondary-color); 
+      font-size: $fontSize12;
+      font-weight: $boldWeights;
+      margin-top: 7px;
+    }
+    
+  }
   @media(max-width: $mobileBreakPoint) {
     .main-header {
       font-size: 20px;
     }
     .sub-header {
-      font-size: $fontSize10;
-      margin-top: 4px;
+      font-size: $fontSize12;
+      margin-top: 3px;
       margin-bottom: 20px;
     }
   }
   @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint){
+    display: flex;
+    justify-content: space-between;
+    width: 640px;
+    margin: 0 auto;
+    
     .main-header {
       font-size: $fontSize22;
       letter-spacing: 0.75px;
     }
-    .sub-header{
+    .sub-header {
       @include subheader_desktop_tablet_styles;
     }
-    .decorative-breakline{
+    .decorative-breakline {
       @include desktop_hr_style;
     }
+    .toggle-container {
+      justify-content: flex-end;
+      padding: 0;
+      .toggler-btn {
+        margin-left: 10px;
+      }
+    } 
   }
   @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
     .main-header {
@@ -98,57 +140,12 @@ header {
       @include desktop_hr_style;
     }
   }
-  
-    
-  
-}
-hr{
-  @include mobile_hr_style;
-  // margin-bottom: 0;
-}
-.toggle-container{
-  @include toggle_flexend;
-  padding: 0 9px;
-
-  input {
-    @include toggle_btn;
-  }
-  input:before {
-    @include toggler;
-
-  }
-  input:checked {
-    background-color: var(--toggle-background);
-    
-  }
-  input:checked:before {
-    transform: translate(115%);
-  }
-  .toggle {
-    color: var(--secondary-color); 
-    font-size: $fontSize10;
-    font-weight: $boldWeights;
-  }
-  
 }
 
 //social dashboard 
-.social-dash {
-  // width: 84%;
-  // margin: 0 auto;
-  //media query goes here 
-  @media(max-width: $mobileBreakPoint) {
-    @include one_column_grid;
-  }
-  @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint){
-    margin-bottom: 50px;
-    @include double_column_grid;
-  }
-  @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
-    @include four_column_grid;
-  }
-
-
+.social-dash { 
+  
+  
   .card1 {
     @include card_border;
     border-color: var(--facebook-color);
@@ -166,13 +163,16 @@ hr{
     border-color: var(--youtube-color);
     margin-right: 0px;
   }
-
-
+  
+  
   .dashboard-card {
     @include dashboard_card;
     @include flex_center;
-    // margin-right: 25px;
-
+    
+    @media(min-width: $smallTabletBreakPoint) and (max-width: $desktopBreakpoint) {
+      width: $tabletDesktopCardWidth;
+    }
+    
     h4 {
       font-size: $fontSize10;
       padding-top: 13px;
@@ -202,7 +202,7 @@ hr{
     }
     .increase { 
       @include increased;
-
+      
       i {
         @include increase_arrow;
       }
@@ -210,12 +210,22 @@ hr{
     }
     .decrease {
       @include decreased;
-
+      
       i {
         @include decrease_arrow;
       }
     }
-
+    
+  }
+  @media(max-width: $mobileBreakPoint) {
+    @include one_column_grid;
+  }
+  @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint){
+    margin-bottom: 50px;
+    @include double_column_grid;
+  }
+  @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
+    @include four_column_grid;
   }
 }
 
@@ -223,28 +233,25 @@ hr{
 
 //overview dashboard general styles 
 .overview-container{
-  //media query goes here 
-    @media(max-width: $mobileBreakPoint) {
-      @include overview_card_display_grid;
-    }
-    @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint) {
-      @include overview_tablet_grid;
-      .overview-header {
-        grid-area: 1 / 1 /  1/ span 2;
-      }
-
-    }
-    @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
-      @include overview_desktop_grid;
-      .overview-header {
-        grid-area: 1 / 1 / span 4 / span 4;
-      }
-    }
-  
-
   .overview-header{
     color: var(--primary-color);
     margin-top: 18px;
+  }
+  @media(max-width: $mobileBreakPoint) {
+    @include overview_card_display_grid;
+  }
+  @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint) {
+    @include overview_tablet_grid;
+    .overview-header {
+      grid-area: 1 / 1 /  1/ span 2;
+    }
+
+  }
+  @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
+    @include overview_desktop_grid;
+    .overview-header {
+        grid-area: 1 / 1 / span 4 / span 4;
+    }
   }
   
   .overview-card {
@@ -266,16 +273,16 @@ hr{
     }
     .increase { 
       @include increased;
-        
+      
       i {
-          @include increase_arrow;
+        @include increase_arrow;
       }
     }
     .decrease {
       @include decreased;
-  
+      
       i{
-          @include decrease_arrow;
+        @include decrease_arrow;
       }
     }
     .column1{
@@ -286,6 +293,9 @@ hr{
       padding-top: 25px;
       padding-right: 25px;
       text-align: end;
+    }
+    @media(min-width: $smallTabletBreakPoint) and (max-width: $desktopBreakpoint) {
+      width: $tabletDesktopCardWidth;
     }
   }
 }
