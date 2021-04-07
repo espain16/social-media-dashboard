@@ -6452,8 +6452,8 @@ header .toggle-container .toggle {
   .social-dash {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (265px)[4];
-        grid-template-columns: repeat(4, 265px);
+    -ms-grid-columns: (323px)[4];
+        grid-template-columns: repeat(4, 323px);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -6509,8 +6509,8 @@ header .toggle-container .toggle {
   .overview-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (265px)[4];
-        grid-template-columns: repeat(4, 265px);
+    -ms-grid-columns: (323px)[4];
+        grid-template-columns: repeat(4, 323px);
     -ms-grid-rows: (1fr)[3];
         grid-template-rows: repeat(3, 1fr);
     -webkit-box-pack: center;
