@@ -6297,7 +6297,7 @@ header .toggle-container .toggle {
   }
 }
 
-@media (min-width: 1050px) and (max-width: 1500px) {
+@media (min-width: 1050px) and (max-width: 1600px) {
   header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6435,7 +6435,7 @@ header .toggle-container .toggle {
   }
 }
 
-@media (min-width: 1050px) and (max-width: 1500px) {
+@media (min-width: 1050px) and (max-width: 1600px) {
   .social-dash .dashboard-card {
     width: 245px;
   }
@@ -6476,7 +6476,7 @@ header .toggle-container .toggle {
   }
 }
 
-@media (min-width: 1050px) and (max-width: 1500px) {
+@media (min-width: 1050px) and (max-width: 1600px) {
   .social-dash {
     display: -ms-grid;
     display: grid;
@@ -6534,7 +6534,7 @@ header .toggle-container .toggle {
   }
 }
 
-@media (min-width: 1050px) and (max-width: 1500px) {
+@media (min-width: 1050px) and (max-width: 1600px) {
   .overview-container {
     display: -ms-grid;
     display: grid;
@@ -6625,7 +6625,7 @@ header .toggle-container .toggle {
   }
 }
 
-@media (min-width: 1050px) and (max-width: 1500px) {
+@media (min-width: 1050px) and (max-width: 1600px) {
   .overview-container .overview-card {
     width: 245px;
   }
