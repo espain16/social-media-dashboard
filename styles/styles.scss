@@ -109,7 +109,7 @@ header {
     justify-content: space-between;
     width: 640px;
     margin: 0 auto;
-    
+    margin-top: 25px;
     .main-header {
       font-size: $fontSize22;
       letter-spacing: 0.75px;
@@ -129,6 +129,12 @@ header {
     } 
   }
   @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
+    display: flex;
+    justify-content: space-between;
+    width: 1059px;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 25px;
     .main-header {
       font-size: $fontSize22;
       letter-spacing: 0.75px;
@@ -139,6 +145,13 @@ header {
     .decorative-breakline{
       @include desktop_hr_style;
     }
+    .toggle-container {
+      justify-content: flex-end;
+      padding: 0;
+      .toggler-btn {
+        margin-left: 10px;
+      }
+    } 
   }
 }
 
@@ -168,10 +181,7 @@ header {
   .dashboard-card {
     @include dashboard_card;
     @include flex_center;
-    
-    @media(min-width: $smallTabletBreakPoint) and (max-width: $desktopBreakpoint) {
-      width: $tabletDesktopCardWidth;
-    }
+    width: $cardWidth;
     
     h4 {
       font-size: $fontSize10;
@@ -215,13 +225,22 @@ header {
         @include decrease_arrow;
       }
     }
+    @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint){
+      width: $tabletCardWidth;
+    }
+    @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
+      width: $desktopCardWidth;
+    }
     
   }
+
+
+
   @media(max-width: $mobileBreakPoint) {
     @include one_column_grid;
   }
   @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint){
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     @include double_column_grid;
   }
   @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
@@ -235,29 +254,33 @@ header {
 .overview-container{
   .overview-header{
     color: var(--primary-color);
-    margin-top: 18px;
+    margin: 28px 0 23px 74px;
   }
   @media(max-width: $mobileBreakPoint) {
     @include overview_card_display_grid;
+    
   }
   @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint) {
     @include overview_tablet_grid;
     .overview-header {
       grid-area: 1 / 1 /  1/ span 2;
+      margin: 0 0 24px 18px;
     }
 
   }
   @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
     @include overview_desktop_grid;
     .overview-header {
-        grid-area: 1 / 1 / span 4 / span 4;
+      margin: 25px 0 22px 14px;
+      grid-area: 1 / 1 / span 4 / span 4;
     }
   }
   
   .overview-card {
     @include overview_card;
     @include overview_card_grid;
-  
+    width: $cardWidth;
+
     .overview-card-title {
       font-size: $fontSize10;
       font-weight: $boldWeights;
@@ -294,8 +317,11 @@ header {
       padding-right: 25px;
       text-align: end;
     }
-    @media(min-width: $smallTabletBreakPoint) and (max-width: $desktopBreakpoint) {
-      width: $tabletDesktopCardWidth;
+    @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint){
+      width: $tabletCardWidth;
+    }
+    @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
+      width: $desktopCardWidth;
     }
   }
 }

@@ -29,7 +29,7 @@
 // social media card specific styles 
 @mixin dashboard_card {
   height: 220px;
-  width: $cardWidth;
+  // width: $cardWidth;
   border-radius: 5px;
   margin-bottom: 20px;
   background-color: var(--card-background);
@@ -38,7 +38,7 @@
 }
 // overview card specific styles 
 @mixin overview_card {
-  width: $cardWidth;
+  // width: $cardWidth;
   border-radius: $borderRadius;
   background-color: var(--card-background);
   margin-bottom: $cardMargin;
@@ -54,7 +54,7 @@
 @mixin overview_card_display_grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(8,1fr);
+  grid-template-rows: repeat(8,auto);
   justify-content: center;
   align-content: center;
 }
@@ -108,7 +108,7 @@
 }
 @mixin four_column_grid {
   display: grid;
-  grid-template-columns: repeat(4, 323px);
+  grid-template-columns: repeat(4, 270px);
   justify-content: center;
   align-items: center;
   justify-items: center;
@@ -117,13 +117,13 @@
 @mixin overview_tablet_grid {
   display: grid;
   grid-template-columns: repeat(2, 335px);
-  grid-template-rows: repeat(5,1fr);
+  grid-template-rows: repeat(5,auto);
   justify-content: center;
 
 }
 @mixin overview_desktop_grid {
   display: grid;
-  grid-template-columns: repeat(4, 323px);
+  grid-template-columns: repeat(4, 270px);
   grid-template-rows: repeat(3,1fr);
   justify-content: center;
 }

@@ -6263,7 +6263,7 @@ header .toggle-container .toggle {
   }
 }
 
-@media (min-width: 755px) and (max-width: 1144px) {
+@media (min-width: 755px) and (max-width: 1049px) {
   header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6273,6 +6273,7 @@ header .toggle-container .toggle {
             justify-content: space-between;
     width: 640px;
     margin: 0 auto;
+    margin-top: 25px;
   }
   header .main-header {
     font-size: 22px;
@@ -6296,7 +6297,19 @@ header .toggle-container .toggle {
   }
 }
 
-@media (min-width: 1145px) and (max-width: 1500px) {
+@media (min-width: 1050px) and (max-width: 1500px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 1059px;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 25px;
+  }
   header .main-header {
     font-size: 22px;
     letter-spacing: 0.75px;
@@ -6307,6 +6320,15 @@ header .toggle-container .toggle {
   }
   header .decorative-breakline {
     display: none;
+  }
+  header .toggle-container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0;
+  }
+  header .toggle-container .toggler-btn {
+    margin-left: 10px;
   }
 }
 
@@ -6333,7 +6355,6 @@ header .toggle-container .toggle {
 
 .social-dash .dashboard-card {
   height: 220px;
-  width: 335px;
   border-radius: 5px;
   margin-bottom: 20px;
   background-color: var(--card-background);
@@ -6351,12 +6372,7 @@ header .toggle-container .toggle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-@media (min-width: 755px) and (max-width: 1500px) {
-  .social-dash .dashboard-card {
-    width: 295px;
-  }
+  width: 335px;
 }
 
 .social-dash .dashboard-card h4 {
@@ -6413,6 +6429,18 @@ header .toggle-container .toggle {
   padding-right: 3px;
 }
 
+@media (min-width: 755px) and (max-width: 1049px) {
+  .social-dash .dashboard-card {
+    width: 295px;
+  }
+}
+
+@media (min-width: 1050px) and (max-width: 1500px) {
+  .social-dash .dashboard-card {
+    width: 245px;
+  }
+}
+
 @media (max-width: 754px) {
   .social-dash {
     display: -ms-grid;
@@ -6431,9 +6459,9 @@ header .toggle-container .toggle {
   }
 }
 
-@media (min-width: 755px) and (max-width: 1144px) {
+@media (min-width: 755px) and (max-width: 1049px) {
   .social-dash {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (335px)[2];
@@ -6448,12 +6476,12 @@ header .toggle-container .toggle {
   }
 }
 
-@media (min-width: 1145px) and (max-width: 1500px) {
+@media (min-width: 1050px) and (max-width: 1500px) {
   .social-dash {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (323px)[4];
-        grid-template-columns: repeat(4, 323px);
+    -ms-grid-columns: (270px)[4];
+        grid-template-columns: repeat(4, 270px);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -6466,7 +6494,7 @@ header .toggle-container .toggle {
 
 .overview-container .overview-header {
   color: var(--primary-color);
-  margin-top: 18px;
+  margin: 28px 0 23px 74px;
 }
 
 @media (max-width: 754px) {
@@ -6475,8 +6503,8 @@ header .toggle-container .toggle {
     display: grid;
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
-    -ms-grid-rows: (1fr)[8];
-        grid-template-rows: repeat(8, 1fr);
+    -ms-grid-rows: (auto)[8];
+        grid-template-rows: repeat(8, auto);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -6485,14 +6513,14 @@ header .toggle-container .toggle {
   }
 }
 
-@media (min-width: 755px) and (max-width: 1144px) {
+@media (min-width: 755px) and (max-width: 1049px) {
   .overview-container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (335px)[2];
         grid-template-columns: repeat(2, 335px);
-    -ms-grid-rows: (1fr)[5];
-        grid-template-rows: repeat(5, 1fr);
+    -ms-grid-rows: (auto)[5];
+        grid-template-rows: repeat(5, auto);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -6502,15 +6530,16 @@ header .toggle-container .toggle {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: 1 / 1 /  1/ span 2;
+    margin: 0 0 24px 18px;
   }
 }
 
-@media (min-width: 1145px) and (max-width: 1500px) {
+@media (min-width: 1050px) and (max-width: 1500px) {
   .overview-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (323px)[4];
-        grid-template-columns: repeat(4, 323px);
+    -ms-grid-columns: (270px)[4];
+        grid-template-columns: repeat(4, 270px);
     -ms-grid-rows: (1fr)[3];
         grid-template-rows: repeat(3, 1fr);
     -webkit-box-pack: center;
@@ -6518,6 +6547,7 @@ header .toggle-container .toggle {
             justify-content: center;
   }
   .overview-container .overview-header {
+    margin: 25px 0 22px 14px;
     -ms-grid-row: 1;
     -ms-grid-row-span: 4;
     -ms-grid-column: 1;
@@ -6527,7 +6557,6 @@ header .toggle-container .toggle {
 }
 
 .overview-container .overview-card {
-  width: 335px;
   border-radius: 5px;
   background-color: var(--card-background);
   margin-bottom: 20px;
@@ -6537,6 +6566,7 @@ header .toggle-container .toggle {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  width: 335px;
 }
 
 .overview-container .overview-card .overview-card-title {
@@ -6589,9 +6619,15 @@ header .toggle-container .toggle {
   text-align: end;
 }
 
-@media (min-width: 755px) and (max-width: 1500px) {
+@media (min-width: 755px) and (max-width: 1049px) {
   .overview-container .overview-card {
     width: 295px;
+  }
+}
+
+@media (min-width: 1050px) and (max-width: 1500px) {
+  .overview-container .overview-card {
+    width: 245px;
   }
 }
 
