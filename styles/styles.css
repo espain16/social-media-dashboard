@@ -6133,7 +6133,8 @@ readers do not read off random characters that represent icons */
 **/
 :root {
   --page-background: white;
-  --card-background: #f5f7ff;
+  --top-page-background: #f5f7ff;
+  --card-background: #f0f2fa;
   --toggle-background: #aeb3cb;
   --primary-color: #1e202a;
   --secondary-color: #63687e;
@@ -6147,15 +6148,22 @@ readers do not read off random characters that represent icons */
 
 .dark {
   --page-background: #1e202a;
+  --top-page-background: #1f212e;
   --card-background: #252a41;
   --toggle-background: linear-gradient #378fe6 to #3eda82;
   --primary-color: white;
   --secondary-color: #8b97c6;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--page-background);
+  margin: 0;
 }
 
 body h1, body h2, body h3, body h4 {
@@ -6183,11 +6191,17 @@ body p > .increase {
 }
 
 header {
-  margin-top: 35px;
-  padding: 0 10px;
+  padding: 0 18px;
+  background-color: var(--top-page-background);
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  height: 200px;
+  position: absolute;
+  width: 100%;
 }
 
 header .main-header {
+  padding-top: 28px;
   color: var(--primary-color);
 }
 
@@ -6210,7 +6224,6 @@ header .toggle-container {
           justify-content: space-between;
   margin-top: 10px;
   margin-bottom: 30px;
-  padding: 0 12px;
 }
 
 header .toggle-container input {
@@ -6271,13 +6284,13 @@ header .toggle-container .toggle {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 640px;
-    margin: 0 auto;
-    margin-top: 25px;
+    padding: 0 75px;
+    height: 272px;
   }
   header .main-header {
     font-size: 22px;
     letter-spacing: 0.75px;
+    padding-top: 45px;
   }
   header .sub-header {
     font-size: 12px;
@@ -6290,7 +6303,7 @@ header .toggle-container .toggle {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    padding: 0;
+    margin-top: 54px;
   }
   header .toggle-container .toggler-btn {
     margin-left: 10px;
@@ -6330,6 +6343,11 @@ header .toggle-container .toggle {
   header .toggle-container .toggler-btn {
     margin-left: 10px;
   }
+}
+
+.social-dash {
+  position: relative;
+  top: 165px;
 }
 
 .social-dash .card1 {
@@ -6372,7 +6390,7 @@ header .toggle-container .toggle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 335px;
+  width: 325px;
 }
 
 .social-dash .dashboard-card h4 {
@@ -6461,7 +6479,7 @@ header .toggle-container .toggle {
 
 @media (min-width: 755px) and (max-width: 1049px) {
   .social-dash {
-    margin-bottom: 30px;
+    top: 154px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (335px)[2];
@@ -6492,9 +6510,15 @@ header .toggle-container .toggle {
   }
 }
 
+.overview-container {
+  position: relative;
+  top: 200px;
+  /* Overview container media queries */
+}
+
 .overview-container .overview-header {
-  color: var(--primary-color);
-  margin: 28px 0 23px 74px;
+  color: var(--secondary-color);
+  margin: 10px 0 30px 88px;
 }
 
 @media (max-width: 754px) {
@@ -6530,7 +6554,7 @@ header .toggle-container .toggle {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: 1 / 1 /  1/ span 2;
-    margin: 0 0 24px 18px;
+    margin: 0 0 28px 20px;
   }
 }
 
@@ -6566,7 +6590,8 @@ header .toggle-container .toggle {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  width: 335px;
+  width: 325px;
+  /*Overview card media queries*/
 }
 
 .overview-container .overview-card .overview-card-title {
@@ -6633,6 +6658,9 @@ header .toggle-container .toggle {
 
 .attribution {
   color: var(--primary-color);
+  position: relative;
+  top: 186px;
+  padding: 10px;
 }
 
 .attribution .footer-links {

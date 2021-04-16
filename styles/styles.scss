@@ -7,7 +7,8 @@
 
 :root{
   --page-background: #{$whiteBackGround};
-  --card-background: #{$paleBlue};
+  --top-page-background: #{$paleBlueTopBackground};
+  --card-background: #{$lightThemeCard};
   --toggle-background: #{$lightToggle};
   --primary-color: #{$darkBlueFont};
   --secondary-color: #{$darkGrayFont};
@@ -21,6 +22,7 @@
 
 .dark {
   --page-background: #{$darkBackGround};
+  --top-page-background: #{$darkBlueTopBackground};
   --card-background: #{$darkThemeCard};
   --toggle-background: #{$darkToggle};
   --primary-color: #{$whiteFont};
@@ -28,10 +30,15 @@
   
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: $fontFamily;
   background-color: var(--page-background);
-
+  margin:0;
+  
   h1,h2,h3,h4 {
     margin: 0;
   }
@@ -55,10 +62,16 @@ body {
 
 
 header {
-  margin-top: 35px;
   padding: $paddingLeftRight;
+  background-color: var(--top-page-background);
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  height: 200px;
+  position: absolute;
+  width: 100%;
 
   .main-header{
+    padding-top: 28px;
     color: var(--primary-color);
   }
   .sub-header {
@@ -70,8 +83,6 @@ header {
   }
   .toggle-container{
     @include toggle_flexend;
-    padding: 0 12px;
-    
     input {
       @include toggle_btn;
     }
@@ -107,12 +118,12 @@ header {
   @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint){
     display: flex;
     justify-content: space-between;
-    width: 640px;
-    margin: 0 auto;
-    margin-top: 25px;
+    padding: 0 75px;
+    height: 272px;
     .main-header {
       font-size: $fontSize22;
       letter-spacing: 0.75px;
+      padding-top: 45px;
     }
     .sub-header {
       @include subheader_desktop_tablet_styles;
@@ -122,7 +133,8 @@ header {
     }
     .toggle-container {
       justify-content: flex-end;
-      padding: 0;
+      margin-top: 54px;
+      // margin-bottom: 0;
       .toggler-btn {
         margin-left: 10px;
       }
@@ -157,7 +169,8 @@ header {
 
 //social dashboard 
 .social-dash { 
-  
+  position: relative;
+  top: 165px;
   
   .card1 {
     @include card_border;
@@ -235,12 +248,12 @@ header {
   }
 
 
-
+  //Social dash media query
   @media(max-width: $mobileBreakPoint) {
     @include one_column_grid;
   }
   @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint){
-    margin-bottom: 30px;
+    top: 154px;
     @include double_column_grid;
   }
   @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
@@ -252,10 +265,14 @@ header {
 
 //overview dashboard general styles 
 .overview-container{
+  position: relative;
+  top: 200px;
+
   .overview-header{
-    color: var(--primary-color);
-    margin: 28px 0 23px 74px;
+    color: var(--secondary-color);
+    margin: 10px 0 30px 88px;
   }
+  /* Overview container media queries */
   @media(max-width: $mobileBreakPoint) {
     @include overview_card_display_grid;
     
@@ -264,7 +281,7 @@ header {
     @include overview_tablet_grid;
     .overview-header {
       grid-area: 1 / 1 /  1/ span 2;
-      margin: 0 0 24px 18px;
+      margin: 0 0 28px 20px;
     }
 
   }
@@ -317,6 +334,8 @@ header {
       padding-right: 25px;
       text-align: end;
     }
+
+    /*Overview card media queries*/
     @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint){
       width: $tabletCardWidth;
     }
@@ -328,9 +347,12 @@ header {
 
 .attribution {
   color: var(--primary-color);
-
+  position:relative;
+  top: 186px;
+  padding: 10px;
   .footer-links {
     color: var(--secondary-color);
   }
+  
 }
 
