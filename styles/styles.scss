@@ -18,6 +18,7 @@
   --youtube-color: #{$youTube};
   --increase-color: #{$limeGreen};
   --decrease-color: #{$brightRed};
+  --card-hover-background: #{$lightHoverColor};
 }
 
 .dark {
@@ -27,6 +28,7 @@
   --toggle-background: #{$darkToggle};
   --primary-color: #{$whiteFont};
   --secondary-color: #{$blueFont};
+  --card-hover-background: #{$darkHoverColor};
   
 }
 
@@ -120,6 +122,7 @@ header {
     justify-content: space-between;
     padding: 0 75px;
     height: 272px;
+
     .main-header {
       font-size: $fontSize22;
       letter-spacing: 0.75px;
@@ -143,10 +146,10 @@ header {
   @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
     display: flex;
     justify-content: space-between;
-    width: 1059px;
-    margin: 0 auto;
-    padding: 0;
-    margin-top: 25px;
+    margin-bottom: 0; 
+    padding: 0 112px;
+    height: 230px;
+
     .main-header {
       font-size: $fontSize22;
       letter-spacing: 0.75px;
@@ -195,6 +198,9 @@ header {
     @include dashboard_card;
     @include flex_center;
     width: $cardWidth;
+    &:hover{
+      background-color: var(--card-hover-background);
+    }
     
     h4 {
       font-size: $fontSize10;
@@ -253,11 +259,12 @@ header {
     @include one_column_grid;
   }
   @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint){
-    top: 154px;
     @include double_column_grid;
+    top: 154px;
   }
   @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
     @include four_column_grid;
+    top: 124px;
   }
 }
 
@@ -287,6 +294,7 @@ header {
   }
   @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
     @include overview_desktop_grid;
+    top: 124px;
     .overview-header {
       margin: 25px 0 22px 14px;
       grid-area: 1 / 1 / span 4 / span 4;
@@ -297,6 +305,9 @@ header {
     @include overview_card;
     @include overview_card_grid;
     width: $cardWidth;
+    &:hover{
+      background-color: var(--card-hover-background);
+    }
 
     .overview-card-title {
       font-size: $fontSize10;
@@ -353,6 +364,9 @@ header {
   .footer-links {
     color: var(--secondary-color);
   }
-  
+  @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
+    top: 116px;
+    padding: 0 0 15px 0;
+  }
 }
 

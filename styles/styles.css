@@ -6144,6 +6144,7 @@ readers do not read off random characters that represent icons */
   --youtube-color: #c4032a;
   --increase-color: #1db489;
   --decrease-color: #dc414c;
+  --card-hover-background: #e0e2eb;
 }
 
 .dark {
@@ -6153,6 +6154,7 @@ readers do not read off random characters that represent icons */
   --toggle-background: linear-gradient #378fe6 to #3eda82;
   --primary-color: white;
   --secondary-color: #8b97c6;
+  --card-hover-background: #2b324f;
 }
 
 * {
@@ -6310,7 +6312,7 @@ header .toggle-container .toggle {
   }
 }
 
-@media (min-width: 1050px) and (max-width: 1600px) {
+@media (min-width: 1050px) and (max-width: 2000px) {
   header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6318,10 +6320,9 @@ header .toggle-container .toggle {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 1059px;
-    margin: 0 auto;
-    padding: 0;
-    margin-top: 25px;
+    margin-bottom: 0;
+    padding: 0 112px;
+    height: 230px;
   }
   header .main-header {
     font-size: 22px;
@@ -6393,6 +6394,10 @@ header .toggle-container .toggle {
   width: 325px;
 }
 
+.social-dash .dashboard-card:hover {
+  background-color: var(--card-hover-background);
+}
+
 .social-dash .dashboard-card h4 {
   font-size: 10px;
   padding-top: 13px;
@@ -6453,7 +6458,7 @@ header .toggle-container .toggle {
   }
 }
 
-@media (min-width: 1050px) and (max-width: 1600px) {
+@media (min-width: 1050px) and (max-width: 2000px) {
   .social-dash .dashboard-card {
     width: 245px;
   }
@@ -6479,7 +6484,6 @@ header .toggle-container .toggle {
 
 @media (min-width: 755px) and (max-width: 1049px) {
   .social-dash {
-    top: 154px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (335px)[2];
@@ -6491,10 +6495,11 @@ header .toggle-container .toggle {
         -ms-flex-align: center;
             align-items: center;
     justify-items: center;
+    top: 154px;
   }
 }
 
-@media (min-width: 1050px) and (max-width: 1600px) {
+@media (min-width: 1050px) and (max-width: 2000px) {
   .social-dash {
     display: -ms-grid;
     display: grid;
@@ -6507,6 +6512,7 @@ header .toggle-container .toggle {
         -ms-flex-align: center;
             align-items: center;
     justify-items: center;
+    top: 124px;
   }
 }
 
@@ -6558,7 +6564,7 @@ header .toggle-container .toggle {
   }
 }
 
-@media (min-width: 1050px) and (max-width: 1600px) {
+@media (min-width: 1050px) and (max-width: 2000px) {
   .overview-container {
     display: -ms-grid;
     display: grid;
@@ -6569,6 +6575,7 @@ header .toggle-container .toggle {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    top: 124px;
   }
   .overview-container .overview-header {
     margin: 25px 0 22px 14px;
@@ -6592,6 +6599,10 @@ header .toggle-container .toggle {
       grid-template-columns: repeat(2, 1fr);
   width: 325px;
   /*Overview card media queries*/
+}
+
+.overview-container .overview-card:hover {
+  background-color: var(--card-hover-background);
 }
 
 .overview-container .overview-card .overview-card-title {
@@ -6650,7 +6661,7 @@ header .toggle-container .toggle {
   }
 }
 
-@media (min-width: 1050px) and (max-width: 1600px) {
+@media (min-width: 1050px) and (max-width: 2000px) {
   .overview-container .overview-card {
     width: 245px;
   }
@@ -6665,5 +6676,12 @@ header .toggle-container .toggle {
 
 .attribution .footer-links {
   color: var(--secondary-color);
+}
+
+@media (min-width: 1050px) and (max-width: 2000px) {
+  .attribution {
+    top: 116px;
+    padding: 0 0 15px 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
