@@ -7,31 +7,42 @@
 
 :root{
   --page-background: #{$whiteBackGround};
-  --card-background: #{$paleBlue};
-  --toggle-background: #{$lightToggle};
+  --top-page-background: #{$paleBlueTopBackground};
+  --card-background: #{$lightThemeCard};
+  --toggle-background: #{$lightToggleBackground};
+  --toggle-button: #{$lightToggleBtn};
   --primary-color: #{$darkBlueFont};
   --secondary-color: #{$darkGrayFont};
   --facebook-color: #{$faceBook};
   --twitter-color: #{$twitter};
-  --instagram-color: #{$instagram};
+  --instagram-color: #{$hotPink};
   --youtube-color: #{$youTube};
   --increase-color: #{$limeGreen};
   --decrease-color: #{$brightRed};
+  --card-hover-background: #{$lightHoverColor};
 }
 
 .dark {
   --page-background: #{$darkBackGround};
+  --top-page-background: #{$darkBlueTopBackground};
   --card-background: #{$darkThemeCard};
-  --toggle-background: #{$darkToggle};
+  --toggle-background: #{$darkToggleBackground};
+  --toggle-button: #{$lightToggleBtn};
   --primary-color: #{$whiteFont};
   --secondary-color: #{$blueFont};
+  --card-hover-background: #{$darkHoverColor};
   
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   font-family: $fontFamily;
   background-color: var(--page-background);
-
+  margin:0;
+  
   h1,h2,h3,h4 {
     margin: 0;
   }
@@ -55,60 +66,118 @@ body {
 
 
 header {
-  margin-top: 35px;
   padding: $paddingLeftRight;
+  background-color: var(--top-page-background);
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  height: 200px;
+  position: absolute;
+  width: 100%;
 
   .main-header{
+    padding-top: 28px;
     color: var(--primary-color);
   }
   .sub-header {
     color: var(--secondary-color);
   }
-  @include media("<=phone") {
+  hr{
+    @include mobile_hr_style;
+    
+  }
+  .toggle-container{
+    @include toggle_flexend;
+    input {
+      @include toggle_btn;
+      background-color: var(--toggle-background);
+    }
+    input:before {
+      @include toggler;
+      
+    }
+    input:checked {
+      background-color: var(--toggle-background);
+      
+    }
+    input:checked:before {
+      transform: translate(115%);
+    }
+    .toggle {
+      color: var(--secondary-color); 
+      font-size: $fontSize12;
+      font-weight: $boldWeights;
+      margin-top: 7px;
+    }
+    
+  }
+  @media(max-width: $mobileBreakPoint) {
     .main-header {
       font-size: 20px;
     }
     .sub-header {
-      font-size: $fontSize10;
-      margin-top: 4px;
+      font-size: $fontSize12;
+      margin-top: 3px;
       margin-bottom: 20px;
     }
-    
   }
-}
-hr{
-  margin-bottom: 0;
-}
-.toggle-container{
-  @include toggle_flexend;
-  padding: 0 9px;
+  @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint){
+    display: flex;
+    justify-content: space-between;
+    padding: 0 75px;
+    height: 272px;
 
-  input {
-    @include toggle_btn;
+    .main-header {
+      font-size: $fontSize22;
+      letter-spacing: 0.75px;
+      padding-top: 45px;
+    }
+    .sub-header {
+      @include subheader_desktop_tablet_styles;
+    }
+    .decorative-breakline {
+      @include desktop_hr_style;
+    }
+    .toggle-container {
+      justify-content: flex-end;
+      margin-top: 54px;
+      // margin-bottom: 0;
+      .toggler-btn {
+        margin-left: 10px;
+      }
+    } 
   }
-  input:before {
-    @include toggler;
+  @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0; 
+    padding: 0 112px;
+    height: 230px;
 
-  }
-  input:checked {
-    background-color: var(--toggle-background);
-    
-  }
-  input:checked:before {
-    transform: translate(115%);
-  }
-  .toggle {
-    color: var(--secondary-color); 
-    font-size: $fontSize10;
-    font-weight: $boldWeights;
+    .main-header {
+      font-size: $fontSize22;
+      letter-spacing: 0.75px;
+    }
+    .sub-header{
+      @include subheader_desktop_tablet_styles;
+    }
+    .decorative-breakline{
+      @include desktop_hr_style;
+    }
+    .toggle-container {
+      justify-content: flex-end;
+      padding: 0;
+      .toggler-btn {
+        margin-left: 10px;
+      }
+    } 
   }
 }
+
 //social dashboard 
-.social-dash {
-
-  @include media("<=phone") {
-    @include column_grid;
-  }
+.social-dash { 
+  position: relative;
+  top: 165px;
+  
   .card1 {
     @include card_border;
     border-color: var(--facebook-color);
@@ -118,23 +187,28 @@ hr{
     border-color: var(--twitter-color);
   }
   .card3 {
-    @include linear_border;
+    @include card_border;
     border-color: var(--instagram-color)
   }
   .card4 {
     @include card_border;
     border-color: var(--youtube-color);
+    margin-right: 0px;
   }
-
-
+  
+  
   .dashboard-card {
     @include dashboard_card;
     @include flex_center;
+    width: $cardWidth;
+    &:hover{
+      background-color: var(--card-hover-background);
+    }
     
-
     h4 {
-      font-size: $fontSize12;
+      font-size: $fontSize10;
       padding-top: 13px;
+      color: var(--secondary-color);
       i {
         vertical-align: sub;
         padding-right: 6px;
@@ -151,6 +225,7 @@ hr{
       letter-spacing: 5px;
       font-size: 11px;
       margin: $marginZero;
+      color: var(--secondary-color);
     }
     .count-for-day {
       font-size: $fontSize10;
@@ -159,7 +234,7 @@ hr{
     }
     .increase { 
       @include increased;
-
+      
       i {
         @include increase_arrow;
       }
@@ -167,12 +242,32 @@ hr{
     }
     .decrease {
       @include decreased;
-
+      
       i {
         @include decrease_arrow;
       }
     }
+    @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint){
+      width: $tabletCardWidth;
+    }
+    @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
+      width: $desktopCardWidth;
+    }
+    
+  }
 
+
+  //Social dash media query
+  @media(max-width: $mobileBreakPoint) {
+    @include one_column_grid;
+  }
+  @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint){
+    @include double_column_grid;
+    top: 154px;
+  }
+  @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
+    @include four_column_grid;
+    top: 124px;
   }
 }
 
@@ -180,17 +275,42 @@ hr{
 
 //overview dashboard general styles 
 .overview-container{
-  @include media("<=phone") {
-    @include column_grid;
-  }
+  position: relative;
+  top: 200px;
+
   .overview-header{
-    color: var(--primary-color);
-    margin-top: 30px;
-    margin-bottom: 25px;
+    color: var(--secondary-color);
+    margin: 10px 0 30px 88px;
   }
+  /* Overview container media queries */
+  @media(max-width: $mobileBreakPoint) {
+    @include overview_card_display_grid;
+    
+  }
+  @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint) {
+    @include overview_tablet_grid;
+    .overview-header {
+      grid-area: 1 / 1 /  1/ span 2;
+      margin: 0 0 28px 20px;
+    }
+
+  }
+  @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
+    @include overview_desktop_grid;
+    top: 124px;
+    .overview-header {
+      margin: 25px 0 22px 14px;
+      grid-area: 1 / 1 / span 4 / span 4;
+    }
+  }
+  
   .overview-card {
     @include overview_card;
-    @include overview_grid;
+    @include overview_card_grid;
+    width: $cardWidth;
+    &:hover{
+      background-color: var(--card-hover-background);
+    }
 
     .overview-card-title {
       font-size: $fontSize10;
@@ -214,7 +334,7 @@ hr{
     }
     .decrease {
       @include decreased;
-
+      
       i{
         @include decrease_arrow;
       }
@@ -228,15 +348,28 @@ hr{
       padding-right: 25px;
       text-align: end;
     }
-  }
 
-}  
+    /*Overview card media queries*/
+    @media(min-width: $smallTabletBreakPoint) and (max-width: $largerTabletBreakPoint){
+      width: $tabletCardWidth;
+    }
+    @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
+      width: $desktopCardWidth;
+    }
+  }
+}
 
 .attribution {
   color: var(--primary-color);
-
+  position:relative;
+  top: 186px;
+  padding: 10px;
   .footer-links {
     color: var(--secondary-color);
+  }
+  @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
+    top: 116px;
+    padding: 0 0 15px 0;
   }
 }
 

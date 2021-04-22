@@ -1,15 +1,34 @@
-//Card styles
-@mixin linear_border {
-  border-top: 30px solid;
-  border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%) 30) ;
+//General styles 
+@mixin subheader_desktop_tablet_styles {
+  font-size: $fontSize12;
+  margin-top: 5px;
 }
+@mixin desktop_hr_style {
+  display: none;
+}
+@mixin mobile_hr_style {
+  border: 0;
+  height: 1px;
+  background: var(--secondary-color);
+}
+//Gradient styles 
+@mixin gradient_background($direction, $instagram){
+  color:linear-gradient($direction, $instagram);
+}
+@mixin linear_gradient_border($direction, $instagram) {
+  // border-top: 30px solid;
+  // border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%) 30) ;
+  border-image: linear-gradient($direction, $instagram);
+  border-top: 3px solid;
+  
+}
+//Card styles
 @mixin card_border {
   border-top: 3px solid;
 }
 // social media card specific styles 
 @mixin dashboard_card {
-  height: 190px;
-  width: $cardWidth;
+  height: 220px;
   border-radius: 5px;
   margin-bottom: 20px;
   background-color: var(--card-background);
@@ -18,17 +37,24 @@
 }
 // overview card specific styles 
 @mixin overview_card {
-  width: $cardWidth;
   border-radius: $borderRadius;
   background-color: var(--card-background);
   margin-bottom: $cardMargin;
   color: var(--primary-color);
+  place-self: center;
   
 }
-@mixin overview_grid {
+@mixin overview_card_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   
+}
+@mixin overview_card_display_grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(8,auto);
+  justify-content: center;
+  align-content: center;
 }
 @mixin overview-percent {
   margin-bottom: 0;
@@ -62,14 +88,42 @@
   padding-right: 3px;
 }
 
-//Grid Layout for cards 
-@mixin column_grid {
+//Social dashboard card media query layouts
+@mixin one_column_grid {
   display: grid;
   grid-column-start: 1;
   grid-row-start: 1;
   grid-row-end: 1;
   justify-content: center;
   align-items: center;
+}
+@mixin double_column_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 335px);
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+@mixin four_column_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+//Overview card media query layouts
+@mixin overview_tablet_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 335px);
+  grid-template-rows: repeat(5,auto);
+  justify-content: center;
+
+}
+@mixin overview_desktop_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  grid-template-rows: repeat(3,1fr);
+  justify-content: center;
 }
 
 //Toggle styles
@@ -92,7 +146,7 @@
   content: "";
   height: 16px;
   width: 16px;
-  background-color: navy;
+  background-color: var(--toggle-button);
   position: absolute; 
   border-radius: 50px;
   top:2px;
