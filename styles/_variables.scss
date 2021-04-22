@@ -13,7 +13,9 @@ $pinkInstagram: hsl(329, 70%, 58%);
 $instagram: $yellowInstagram, $pinkInstagram;
 
 //Dark Theme Colors
-$darkToggle: linear-gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+$darkToggleBtn: hsl(229, 29%, 24%);
+// $darkToggleBackground: linear-gradient(45deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%)) ;
+$darkToggleBackground:hsl(210, 78%, 56%);
 $darkBackGround: hsl(230, 17%, 14%);
 $darkBlueTopBackground: hsl(232, 19%, 15%);
 $darkThemeCard: hsl(228, 28%, 20%);
@@ -22,7 +24,8 @@ $whiteFont: hsl(0, 0%, 100%);
 $darkHoverColor: hsl(229, 29%, 24%);
 
 //Light Theme Colors
-$lightToggle: hsl(230, 22%, 74%);
+$lightToggleBtn: hsl(0, 0%, 100%);
+$lightToggleBackground: hsl(230, 22%, 74%);
 $whiteBackGround: hsl(0, 0%, 100%);
 $paleBlueTopBackground: hsl(225, 100%, 98%);
 $lightThemeCard: hsl(227, 47%, 96%);

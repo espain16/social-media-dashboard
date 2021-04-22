@@ -9,7 +9,8 @@
   --page-background: #{$whiteBackGround};
   --top-page-background: #{$paleBlueTopBackground};
   --card-background: #{$lightThemeCard};
-  --toggle-background: #{$lightToggle};
+  --toggle-background: #{$lightToggleBackground};
+  --toggle-button: #{$lightToggleBtn};
   --primary-color: #{$darkBlueFont};
   --secondary-color: #{$darkGrayFont};
   --facebook-color: #{$faceBook};
@@ -25,7 +26,8 @@
   --page-background: #{$darkBackGround};
   --top-page-background: #{$darkBlueTopBackground};
   --card-background: #{$darkThemeCard};
-  --toggle-background: #{$darkToggle};
+  --toggle-background: #{$darkToggleBackground};
+  --toggle-button: #{$lightToggleBtn};
   --primary-color: #{$whiteFont};
   --secondary-color: #{$blueFont};
   --card-hover-background: #{$darkHoverColor};
@@ -87,6 +89,7 @@ header {
     @include toggle_flexend;
     input {
       @include toggle_btn;
+      background-color: var(--toggle-background);
     }
     input:before {
       @include toggler;

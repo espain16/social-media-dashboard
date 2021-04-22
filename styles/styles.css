@@ -6136,6 +6136,7 @@ readers do not read off random characters that represent icons */
   --top-page-background: #f5f7ff;
   --card-background: #f0f2fa;
   --toggle-background: #aeb3cb;
+  --toggle-button: white;
   --primary-color: #1e202a;
   --secondary-color: #63687e;
   --facebook-color: #198ff5;
@@ -6151,7 +6152,8 @@ readers do not read off random characters that represent icons */
   --page-background: #1e202a;
   --top-page-background: #1f212e;
   --card-background: #252a41;
-  --toggle-background: linear-gradient #378fe6 to #3eda82;
+  --toggle-background: #378fe6;
+  --toggle-button: white;
   --primary-color: white;
   --secondary-color: #8b97c6;
   --card-hover-background: #2b324f;
@@ -6238,13 +6240,14 @@ header .toggle-container input {
   height: 20px;
   background-color: #1ca0f2;
   position: relative;
+  background-color: var(--toggle-background);
 }
 
 header .toggle-container input:before {
   content: "";
   height: 16px;
   width: 16px;
-  background-color: navy;
+  background-color: var(--toggle-button);
   position: absolute;
   border-radius: 50px;
   top: 2px;
