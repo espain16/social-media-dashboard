@@ -6675,6 +6675,7 @@ header .toggle-container .toggle {
   position: relative;
   top: 186px;
   padding: 10px;
+  text-align: center;
 }
 
 .attribution .footer-links {
@@ -6683,7 +6684,7 @@ header .toggle-container .toggle {
 
 @media (min-width: 1050px) and (max-width: 2000px) {
   .attribution {
-    top: 116px;
+    top: 200px;
     padding: 0 0 15px 0;
   }
 }
