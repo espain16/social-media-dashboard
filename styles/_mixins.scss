@@ -11,17 +11,6 @@
   height: 1px;
   background: var(--secondary-color);
 }
-//Gradient styles 
-@mixin gradient_background($direction, $instagram){
-  color:linear-gradient($direction, $instagram);
-}
-@mixin linear_gradient_border($direction, $instagram) {
-  // border-top: 30px solid;
-  // border-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%) 30) ;
-  border-image: linear-gradient($direction, $instagram);
-  border-top: 3px solid;
-  
-}
 //Card styles
 @mixin card_border {
   border-top: 3px solid;

@@ -364,11 +364,12 @@ header {
   position:relative;
   top: 186px;
   padding: 10px;
+  text-align: center;
   .footer-links {
     color: var(--secondary-color);
   }
   @media(min-width: $ipadProBreakpoint) and (max-width: $desktopBreakpoint) {
-    top: 116px;
+    top: 200px;
     padding: 0 0 15px 0;
   }
 }
