@@ -6126,11 +6126,6 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-/**
-*
-* Testing
-*
-**/
 :root {
   --page-background: white;
   --top-page-background: #f5f7ff;
